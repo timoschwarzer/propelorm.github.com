@@ -723,7 +723,7 @@ $book->clearAllReferences() // resets all collections of referencing foreign key
 // clear() and clearAllReferences() may help in PHP 5.2 to compensate PHP's inability to garbage collect
 
 $book1 = BookQuery::create()->findPk(1234);
-$book2 = book1->copy(); // creates a copy of an Active Record instance
+$book2 = $book1->copy(); // creates a copy of an Active Record instance
 echo $book1->equals($book2); // compares two ActiveRecord instances
 ```
 
